@@ -212,4 +212,11 @@
 	)
 )
 
+(defun expr-car (expr env)
+    (if (atom (cadr expr))
+        (format nil "(CAR ~a) ~C" (cadr expr) #\linefeed)
+        '()
+    )
+)
+
  
